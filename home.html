@@ -27,7 +27,7 @@
 
 <body  class="min-h-screen  max-w-md  bg-base-200 mx-auto">
 
-  <header class="border-b-2 border-gray-300">
+  <header class="border-b-2 border-gray-300 sticky top-0  bg-base-200 z-10">
    <section class="w-11/12 mx-auto py-3 flex  justify-between items-center">
 
 <div class="left flex gap-1">
@@ -93,14 +93,43 @@
 
       </div>
   </section>
+<!-- CashOut  from-->
+<section  id="cashout" class=" w-11/12  mx-auto py-5"> 
+  <h2 class="text-xl font-bold mb-5">Cashout</h2>
+  <div class="card bg-base-100 w-full  rounded-2xl">
+      <div class="card-body">
+
+        <fieldset class="fieldset">
+          <label class="label text-neutral font-bold text-lg">Agent Number</label>
+          <input id="cashout-number" type="text" 
+          class="input rounded-full bg-base-200 w-full " 
+          value="01609900742"
+          maxlength="11"
+          minlength="11"
+          placeholder="Enyter your 11 digit number" />
+ <br>
+          <label class="label text-neutral font-bold ">Amount</label>
+          <input id="cashout-amount" type="number" 
+          value="01609900742"
+          class="input rounded-full bg-base-200 w-full " 
+          placeholder="Enyter amount to withdrow" />
+<br>
+          <label class="label text-neutral font-bold text-lg">pin Number </label>
+          <input id="cashout-pin" type="pin" class="input rounded-full bg-base-200 w-full" value="1234"
+          maxlength="4" 
+          placeholder="Enter 4 digit pin number" />
+<br>
+          <button id="cashout-btn" class="btn btn-primary rounded-full mt-4">Withdraw Money</button>
+        </fieldset>
+      </div>
+    </div>
+</section>
 
 
 
 
 
-
-
-
+<script src="/script/cashout.js"></script>
 
 </body>
 </html>
