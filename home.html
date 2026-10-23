@@ -56,35 +56,35 @@
 
       <div class="buttons grid grid-cols-3 gap-3">
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-1.png" alt="">
           <p>Add Money</p>
         </button>
 
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-2.png" alt="">
           <p>Cashout</p>
         </button>
 
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('transfer')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-3.png" alt="">
           <p>TransferMoney</p>
         </button>
 
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('get-bonus')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-4.png" alt="">
           <p>Get Bonus</p>
         </button>
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('pay-money')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-5.png" alt="">
           <p>Pay Bill</p>
         </button>
 
-        <button class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
+        <button onclick="showOnly('transaction-history')" class="btn flex-col h-full py-4  bg-white border border-gray-200  rounded-xl">
           <img src="assets/opt-6.png" alt="">
           <p>Transactions</p>
         </button>
@@ -94,7 +94,7 @@
 
   
 <!-- add money  section-->
-   <section id="add-money " class="w-11/12 mx-auto  py-5 hidden " >
+   <section id="add-money" class="w-11/12 mx-auto  py-5 hidden" >
     <h2 class="text-xl font-bold mb-5">Add Money </h2>
 
       
@@ -147,7 +147,7 @@
    </section>
 
 <!-- CashOut  from-->
-<section  id="cashout" class=" w-11/12  mx-auto py-5 hidden"> 
+<section  id="cashout" class=" w-11/12  mx-auto py-5  hidden"> 
   <h2 class="text-xl font-bold mb-5">Cashout</h2>
   <div class="card bg-base-100 w-full  rounded-2xl">
       <div class="card-body">
@@ -172,14 +172,14 @@
           maxlength="4" 
           placeholder="Enter 4 digit pin number" />
 <br>
-          <button id="cashout-btn" class="btn btn-primary rounded-full mt-4">Withdraw Money</button>
+          <button id="cashout-btn" class="btn btn-primary rounded-full mt-4 text-lg">Withdraw Money</button>
         </fieldset>
       </div>
     </div>
 </section>
 
 <!-- Transfer Money -->
-  <section  id="transfer" class=" w-11/12  mx-auto py-5 hidden"> 
+  <section  id="transfer" class=" w-11/12  mx-auto py-5  hidden"> 
   <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
   <div class="card bg-base-100 w-full  rounded-2xl">
       <div class="card-body">
@@ -204,14 +204,14 @@
           maxlength="4" 
           placeholder="Enter 4 digit pin number" />
 <br>
-          <button id="send-btn" class="btn btn-primary rounded-full mt-4">Send Now</button>
+          <button id="send-btn" class="btn btn-primary rounded-full mt-4 text-lg">Send Now</button>
         </fieldset>
       </div>
     </div>
 </section>
 
 <!-- Get Bonus -->
- <section  id="get-bonus" class=" w-11/12  mx-auto py-5 hidden "> 
+ <section  id="get-bonus" class=" w-11/12  mx-auto py-5  hidden"> 
   <h2 class="text-xl font-bold mb-5">Get Bonus</h2>
   <div class="card bg-base-100 w-full  rounded-2xl">
       <div class="card-body">
@@ -234,7 +234,7 @@
   
   <!-- PayBill -->
    
- <section id="pay-money " class="w-11/12 mx-auto  py-5 hidden" >
+ <section id="pay-money" class="w-11/12 mx-auto  py-5 hidden" >
     <h2 class="text-xl font-bold mb-5">Pay Bill</h2>
 
     <div class="card bg-base-100 w-full  shadow  rounded-2xl">
@@ -283,140 +283,22 @@
     </div>
    </section>
 
-   
-<!-- Transaction History -->
-<section id="transaction-history" class="w-11/12 mx-auto py-5">
 
-  <!-- Heading -->
-  <div class="flex justify-between items-center mb-5">
-    <h2 class="text-lg font-bold text-gray-800">
-      Transaction History
-    </h2>
 
-    <button id="view-all-btn" class="text-sm text-gray-500">
-      View All
-    </button>
+<!-- Transactional History-->
+<section id="histor"  class="w-11/12 mx-auto  py-5 ">
+  <h2 class="text-xl font-bold mb-5">Transaction</h2>
+  <div id="histor-container" class="space-y-5">
+    <div class="transaction-card py-5 bg-base-200">
+    </div>
   </div>
 
-  <!-- Transaction List -->
-  <div id="transaction-list" class="space-y-3">
-
-    <!-- Electricity Bill -->
-    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
-
-      <div class="flex items-center gap-3 min-w-0">
-
-        <!-- Electricity Image -->
-        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
-          <img src="/assets/opt-5.png" alt="Electricity Bill"
-           >
-        </div>
-
-        <div class="min-w-0">
-          <h3 class="font-bold text-gray-600">Electricity Bill</h3>
-          <p class="transaction-time text-xs text-gray-500 mt-1"></p>
-        </div>
-
-      </div>
-
-      <button type="button"
-        class="text-gray-500 text-2xl px-1 shrink-0"
-        aria-label="Electricity bill options">
-        &#8942;
-      </button>
-
-    </div>
-
-    <!-- Bank Deposit -->
-    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
-
-      <div class="flex items-center gap-3 min-w-0">
-
-        <!-- Bank Deposit Image -->
-        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
-          <img src="/assets/opt-5.png" alt="Bank Deposit"
-              >
-        </div>
-
-        <div class="min-w-0">
-          <h3 class="font-bold text-gray-600">Bank Deposit</h3>
-          <p class="transaction-time text-xs text-gray-500 mt-1"></p>
-        </div>
-
-      </div>
-
-      <button type="button"
-        class="text-gray-500 text-2xl px-1 shrink-0"
-        aria-label="Bank deposit options">
-        &#8942;
-      </button>
-
-    </div>
-
-    <!-- Mobile Recharge -->
-    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
-
-      <div class="flex items-center gap-3 min-w-0">
-
-        <!-- Mobile Recharge Image -->
-        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
-          <img src="/assets/opt-5.png" alt="Mobile Recharge"
-            >
-        </div>
-
-        <div class="min-w-0">
-          <h3 class="font-bold text-gray-600">Mobile Recharge</h3>
-          <p class="transaction-time text-xs text-gray-500 mt-1"></p>
-        </div>
-
-      </div>
-
-      <button type="button"
-        class="text-gray-500 text-2xl px-1 shrink-0"
-        aria-label="Mobile recharge options">
-        &#8942;
-      </button>
-
-    </div>
-
-    <!-- Gas Bill -->
-    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
-
-      <div class="flex items-center gap-3 min-w-0">
-
-        <!-- Gas Bill Image -->
-        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
-          <img src="/assets/opt-5.png" alt="Gas Bill"
-             >
-        </div>
-
-        <div class="min-w-0">
-          <h3 class="font-bold text-gray-600">Gas Bill</h3>
-          <p class="transaction-time text-xs text-gray-500 mt-1"></p>
-        </div>
-
-      </div>
-
-      <button type="button"
-        class="text-gray-500 text-2xl px-1 shrink-0"
-        aria-label="Gas bill options">
-        &#8942;
-      </button>
-
-    </div>
-
-  </div>
 </section>
-
- 
-
 
 
 
 
 <script src="script/machine.js"></script>
-<script src="script/history.js"></script>
-
 <script src="script/addmoney.js"></script>
 <script src="/script/cashout.js"></script>
 <script src="script/transfer.js"></script>

@@ -32,7 +32,43 @@ if(transferNumber.length != 11){
  const pin = getValueFromInput("transfer-pin")
 if( pin === "1234"){
   alert(`Transfer Money Success from ${transferNumber} at ${Date()}`)
-  setBalance(transferBalance)
+  setBalance(transferBalance);
+  //1 history -container ke shore niya sbu
+   const transaction  = document.getElementById("histor-container")
+   //2 ceate div
+    const newHistory= document.createElement("div");
+    //step-3: new div innerhtml add koro
+    newHistory.innerHTML =`
+    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
+
+      <div class="flex items-center gap-3 min-w-0">
+
+        <!-- Electricity Image -->
+        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
+          <img src="/assets/opt-6.png" alt="Mobile Recharge"
+           >
+        </div>
+
+        <div class="min-w-0">
+          <h3 class="font-bold text-gray-600">Mobile Recharge</h3>
+          <p class="transaction-time text-xs text-gray-500 mt-1"></p>
+        </div>
+
+      </div>
+
+      <button type="button"
+        class="text-gray-500 text-2xl px-1 shrink-0"
+        aria-label="Mobile Recharge options">
+        &#8942;
+      </button>
+
+    </div>
+
+`
+    //step-4 history container e newDiv append korbu
+    transaction.append(newHistory);
+
+
 }else{
   alert("Invalide Pin Number");
   return;

@@ -28,7 +28,42 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   if (pin === "1234") {
     // 7. Show success message and update the balance
     alert("Cashout successful");
-      setBalance(newBalance);
+    setBalance(newBalance);
+
+   
+   const transaction  = document.getElementById("histor-container")
+   
+    const newHistory= document.createElement("div");
+
+    newHistory.innerHTML =`
+    <div class="transaction-card flex items-center justify-between bg-white border border-gray-200 rounded-2xl p-4">
+
+      <div class="flex items-center gap-3 min-w-0">
+
+        <!-- Electricity Image -->
+        <div class="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden shrink-0">
+          <img src="/assets/opt-1.png" alt="Bank Deposit"
+           >
+        </div>
+
+        <div class="min-w-0">
+          <h3 class="font-bold text-gray-600"></h3>
+          <p class="transaction-time text-xs text-gray-500 mt-1">Bank Deposit</p>
+        </div>
+
+      </div>
+
+      <button type="button"
+        class="text-gray-500 text-2xl px-1 shrink-0"
+        aria-label="Bank Deposit">
+        &#8942;
+      </button>
+
+    </div>
+
+`
+    transaction.append(newHistory);
+
   } else {
     alert("Invalid PIN");
     return;
