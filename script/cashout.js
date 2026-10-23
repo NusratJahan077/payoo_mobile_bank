@@ -11,11 +11,8 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   // 2. Get the cashout amount
   const cashoutAmount = getValueFromInput("cashout-amount");
-
  const currentBalance =getBalance();
-
-
-  // 4. Calculate the new balance
+  //2.1  Calculate the new balance
   const newBalance = currentBalance - Number(cashoutAmount);
   console.log(newBalance);
 

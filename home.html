@@ -94,7 +94,7 @@
 
   
 <!-- add money  section-->
-   <section id="add-money " class="w-11/12 mx-auto  py-5 " >
+   <section id="add-money " class="w-11/12 mx-auto  py-5 hidden" >
     <h2 class="text-xl font-bold mb-5">Add Money </h2>
 
       
@@ -178,11 +178,44 @@
     </div>
 </section>
 
+<!-- Transfer Money -->
+  <section  id="cashout" class=" w-11/12  mx-auto py-5 "> 
+  <h2 class="text-xl font-bold mb-5">Transfer Money</h2>
+  <div class="card bg-base-100 w-full  rounded-2xl">
+      <div class="card-body">
+
+        <fieldset class="fieldset">
+          <label class="label text-neutral font-bold text-lg">User Account Number</label>
+          <input id="transfer-number" type="text" 
+          class="input rounded-full bg-base-200 w-full " 
+          value="01609900742"
+          maxlength="11"
+          minlength="11"
+          placeholder="Enyter  11 digit number" />
+ <br>
+          <label class="label text-neutral font-bold text-lg">Amount</label>
+          <input id="transfer-amount" type="number" 
+          value="01609900742"
+          class="input rounded-full bg-base-200 w-full " 
+          placeholder="Enyter account to transfer" />
+<br>
+          <label class="label text-neutral font-bold text-lg">pin Number </label>
+          <input id="transfer-pin" type="pin" class="input rounded-full bg-base-200 w-full" value="1234"
+          maxlength="4" 
+          placeholder="Enter 4 digit pin number" />
+<br>
+          <button id="send-btn" class="btn btn-primary rounded-full mt-4">Send Now</button>
+        </fieldset>
+      </div>
+    </div>
+</section>
 
 
 <script src="script/addmoney.js"></script>
 <script src="script/machine.js"></script>
 <script src="/script/cashout.js"></script>
+<script src="script/transfer.js"></script>
+
 
 </body>
 </html>

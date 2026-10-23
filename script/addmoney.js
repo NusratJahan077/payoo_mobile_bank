@@ -1,4 +1,7 @@
+
+
 document.getElementById("add-money-btn").addEventListener("click" ,function(){
+
 //s-1: bank account get
 const bankAccount = getValueFromInput("add-money-bank");
 if(bankAccount === "Select a Bank"){
@@ -6,7 +9,7 @@ if(bankAccount === "Select a Bank"){
   return;
 }
 
-//get bank account number
+//2.get bank account number
   const  accno =getValueFromInput("add-bank-number");
   if(accno.length != 11){
     alert("invalide account number");
@@ -19,7 +22,8 @@ if(bankAccount === "Select a Bank"){
   const newBalance = currentBalance + Number(amount);
   console.log("Newe Balance:",newBalance)
 
-// pin
+
+  //4. pin
 const pin =getValueFromInput("add-money-pin")
  if (pin === "1234") {
     // 7. Show success message and update the balance
@@ -31,11 +35,6 @@ const pin =getValueFromInput("add-money-pin")
     alert("Invalid Pin");
     return;
   }
-
-
-
-
-
 
 
 })
