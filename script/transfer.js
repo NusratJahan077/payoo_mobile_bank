@@ -5,7 +5,7 @@ const transferNumber = getValueFromInput("transfer-number")
 if(transferNumber.length != 11){
   alert("Invalide Number");
   return ;
-}
+}       
 
  // 2. Transfer amount
  const amount = getValueFromInput("transfer-amount");

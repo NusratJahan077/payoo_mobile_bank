@@ -20,21 +20,24 @@ if(bankAccount === "Select a Bank"){
   const amount = getValueFromInput("add-money-amount");
   const currentBalance = getBalance();
   const newBalance = currentBalance + Number(amount);
-  console.log("Newe Balance:",newBalance)
+  console.log("New Balance:",newBalance)
 
 
   //4. pin
-const pin =getValueFromInput("add-money-pin")
- if (pin === "1234") {
+  const pin =getValueFromInput("add-money-pin")
+  if (pin === "1234") {
     // 7. Show success message and update the balance
    alert(`Add Money Success from ${bankAccount}
      at ${new Date()}`);
     // Set the updated balance after adding money
-    setBalance(newBalance)
+   setBalance(newBalance);
   } else {
     alert("Invalid Pin");
-    return;
+    return
   }
 
 
 })
+
+
+
