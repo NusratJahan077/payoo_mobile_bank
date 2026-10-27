@@ -13,3 +13,6 @@ A simple mobile banking web application built with HTML, Tailwind CSS, DaisyUI, 
 
 ### Technologies Used
 HTML5, Tailwind CSS, DaisyUI, JavaScript
+
+Link: https://nusratjahan077.github.io/payoo_mobile_bank/
+
